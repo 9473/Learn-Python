@@ -1,0 +1,70 @@
+# !这不是可以运行的文件
+# python3 变量的基本运算和互相转换
+# integer,float,string,boolean
+
+# python 是区分大小写的，甚至可以用_，但不能用数字作为变量的首位
+aa = 3
+Aa = 3.0
+astring = '3.0'
+AA = True
+# python 对这些变量类型和赋值是灵活的
+# python 的除法不会向下取整，毕竟不是严谨的编程语法
+
+# 严格的除法
+3/5
+3//5
+print(3/5, 3//5)
+# 0.6 0，后者的原理是把小数点后面的舍掉
+print(9//5)
+
+# 乘方
+2**3
+2^3
+print(2**3, 2^3)
+# 8 1，在 python 里面2^3是有意义的，但计算方式不是它长得数学上那样。要切记，很多时候如果误用，在大量的代码里bug是很难找出来的
+
+# 单引号的问题
+#B = 'He's a good boy.'
+B = 'He\'s a good boy.'
+# python 会把'当作第一个'的配对，这种时候\表示跳过，它后面的一个字符失去原本的意义
+'\n' 
+# 只能用print识别出来
+print('\n A') 
+
+# 字符的运算，连接两个字符
+B = 'X'
+C = 'Y model'
+print(B+C)
+print(B*10)
+# 不能乘以一个浮点数
+
+# 帮我们确定这里面有多少个字符，只适用于string
+len(C)
+print(len(C))
+
+# True 和 False 的另外一种表示
+F = (3>5)
+print(True == 1)
+# 0:False, others:True
+print(3 == '3')
+
+# and, or, not
+print(not 0<3)
+# not是把结果取反
+
+# print
+i = 1
+j = '3'
+# print( i + j) wrong
+print(str(i)+j)
+print(str(i))
+print(i+int(j))
+# int('3.7') wrong
+l = int(float('3.7')) # 向下取整
+
+# boolean 的转换
+print(bool('True'))
+print(bool('False'))
+# 可以看到 print(bool('False')) 返回的是 True，这是为什么呢？
+print(bool(0))
+# bool只承认0是False，相当老实本分了
